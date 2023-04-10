@@ -1,0 +1,11 @@
+{
+  "name": "mofer",
+  "version": "1.0.0",
+  "description": "Industrial project phase II ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yeabsira",
+  "license": "ISC"
+}
