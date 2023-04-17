@@ -32,7 +32,7 @@ const mockdata = [
     ],
   },
   {
-    label: "Releases",
+    label: "Category",
     icon: IconCalendarStats,
     links: [
       { label: "Upcoming releases", link: "/" },
@@ -40,8 +40,8 @@ const mockdata = [
       { label: "Releases schedule", link: "/" },
     ],
   },
-  { label: "Analytics", icon: IconPresentationAnalytics },
-  { label: "Contracts", icon: IconFileAnalytics },
+  { label: "Category", icon: IconPresentationAnalytics },
+  { label: "category", icon: IconFileAnalytics },
   { label: "Settings", icon: IconAdjustments },
   {
     label: "Security",

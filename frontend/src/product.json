@@ -1,24 +1,24 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
+    "name": "ersha",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "price": 9.99,
-    "image": "product1.jpg"
+    "image": "../public/a1.png"
   },
   {
     "id": 2,
     "name": "Product 2",
     "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 4.99,
-    "image": "product2.jpg"
+    "price": 4.5,
+    "image": "https://i.imgur.com/NMLpcKj.jpeg"
   },
   {
     "id": 3,
     "name": "Product 3",
     "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 19.99,
-    "image": "product2.jpg"
+    "price": 19.5,
+    "image": "https://i.imgur.com/CSMrmgZ.jpeg"
   },
   {
     "id": 4,
@@ -29,34 +29,41 @@
   },
   {
     "id": 5,
-    "name": "Product 6",
+    "name": "Product 5",
     "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "price": 14.99,
     "image": "product2.jpg"
   },
   {
     "id": 6,
-    "name": "Product 7",
+    "name": "Product 6",
     "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "price": 14.99,
     "image": "product2.jpg"
   },
   {
     "id": 7,
-    "name": "Product 8",
+    "name": "Product 7",
     "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "price": 143.99,
     "image": "product2.jpg"
   },
   {
     "id": 8,
-    "name": "Product 9",
+    "name": "Product 8",
     "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "price": 14.99,
     "image": "product2.jpg"
   },
   {
     "id": 9,
+    "name": "Product 9",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 14.99,
+    "image": "product2.jpg"
+  },
+  {
+    "id": 10,
     "name": "Product 10",
     "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "price": 14.99,

@@ -15,11 +15,14 @@ import {
   IconManualGearbox,
   IconUsers,
 } from "@tabler/icons-react";
-import product from "../product.json";
+import { useContext } from "react";
+import product from "../../product.json";
+import { ShopContext } from "../../context/shop-context";
 
 const useStyles = createStyles((theme) => ({
   card: {
     maxWidth: 320,
+
     backgroundColor:
       theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
   },
@@ -28,6 +31,7 @@ const useStyles = createStyles((theme) => ({
     padding: theme.spacing.md,
     display: "flex",
     maxWidth: 320,
+    height: 300,
     alignItems: "center",
     justifyContent: "center",
     borderBottom: `${rem(1)} solid ${
@@ -51,6 +55,10 @@ const useStyles = createStyles((theme) => ({
     }`,
   },
 
+  Images: {
+    maxWidth: 320,
+  },
+
   icon: {
     marginRight: rem(5),
     color:
@@ -61,14 +69,16 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const mockdata = [
-  { label: "4 passengers", icon: IconUsers },
-  { label: "100 km/h in 4 seconds", icon: IconGauge },
-  { label: "Automatic gearbox", icon: IconManualGearbox },
-  { label: "Electric", icon: IconGasStation },
+  // { label: "4 passengers", icon: IconUsers },
+  // { label: "100 km/h in 4 seconds", icon: IconGauge },
+  // { label: "Automatic gearbox", icon: IconManualGearbox },
+  // { label: "Electric", icon: IconGasStation },
 ];
 
 export default function ProdFeaturesCard({ product }) {
+  const { addToCart, cartItems } = useContext(ShopContext);
   const { classes } = useStyles();
+  const cartItemsAmount = cartItems[product.id];
   const features = mockdata.map((feature) => (
     <Center key={feature.label}>
       <feature.icon size="1.05rem" className={classes.icon} stroke={1.5} />
@@ -79,14 +89,20 @@ export default function ProdFeaturesCard({ product }) {
   return (
     <Card withBorder radius="md" className={classes.card}>
       <Card.Section className={classes.imageSection}>
-        <Image src="https://i.imgur.com/ZL52Q2D.png" alt="Tesla Model S" />
+        <Image
+          className={classes.Images}
+          src={product.image}
+          alt="Product item"
+          width={320}
+          height={332}
+        />
       </Card.Section>
 
       <Group position="apart" mt="md">
         <div>
           <Text fw={500}>{product.name}</Text>
           <Text fz="xs" c="dimmed">
-            Free recharge at any station
+            {/* Free recharge at any station */}
           </Text>
         </div>
         <Badge variant="outline">25% off</Badge>
@@ -113,8 +129,12 @@ export default function ProdFeaturesCard({ product }) {
             </Text>
           </div>
 
-          <Button radius="xl" style={{ flex: 1 }}>
-            Rent now
+          <Button
+            radius="xl"
+            style={{ flex: 1 }}
+            onClick={() => addToCart(product.id)}
+          >
+            Add to Cart {cartItemsAmount > 0 && <> ({cartItemsAmount})</>}
           </Button>
         </Group>
       </Card.Section>

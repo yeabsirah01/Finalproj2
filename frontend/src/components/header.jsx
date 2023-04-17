@@ -1,5 +1,5 @@
 import AvatarIcon from "./AvatarIcon";
-import CartIcon from "./cartIcon";
+import CartIcon from "./cart/cartIcon";
 import {
   createStyles,
   Header,

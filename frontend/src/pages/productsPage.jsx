@@ -1,26 +1,19 @@
-import ProdFeaturesCard from "./product";
-import NavbarNested from "./ProductNavbar";
+import ProdFeaturesCard from "../components/products/product";
+import NavbarNested from "../components/products/ProductNavbar";
+import "../styles/product-page.css";
 
-import product from "../product";
+import product from "../product.json";
 
 import { Flex, ScrollArea, SimpleGrid } from "@mantine/core";
 
 function ProductPage() {
-  console.log(product);
   return (
-    <Flex
-      mih={50}
-      bg="rgba(0, 0, 0, .3)"
-      gap="md"
-      justify="flex-start"
-      align="flex-start"
-      direction="row"
-      wrap="wrap"
-    >
-      <>
+    <div className="container">
+      <div className="catagory-list">
         <NavbarNested />
-      </>
-      <>
+      </div>
+
+      <div className="product-list">
         <ScrollArea
           h={800}
           scrollbarSize={10}
@@ -32,8 +25,8 @@ function ProductPage() {
             ))}
           </SimpleGrid>
         </ScrollArea>
-      </>
-    </Flex>
+      </div>
+    </div>
   );
 }
 export default ProductPage;
